@@ -1,11 +1,8 @@
+import org.junit.Before;
 import org.junit.Test;
-
-public class KitchenTest {
-import org.junit.*;
 import static org.junit.Assert.*;
 
-    public class KitchenTest {
-
+public class KitchenTest {
         Kitchen emptyKitchen;
         Kitchen kitchenWithOne;
         Kitchen kitchenWithMany;
@@ -76,4 +73,3 @@ import static org.junit.Assert.*;
             assertTrue(kitchenWithMany.contains("white corn"));
         }
     }
-}
