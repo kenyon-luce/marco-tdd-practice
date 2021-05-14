@@ -70,8 +70,17 @@ public class KitchenTest {
 
     @Test
     public void testContains() {
-        assertFalse(emptyKitchen.contains("blue corn"));
-        assertTrue(kitchenWithOne.contains("yellow corn"));
-        assertTrue(kitchenWithMany.contains("white corn"));
+        assertFalse(emptyKitchen.contains("blue corn")); //pass
+        assertTrue(kitchenWithOne.contains("yellow corn")); //pass
+        assertTrue(kitchenWithMany.contains("white corn")); //pass, this array contains white corn as an element
     }
+
+    @Test
+    public void testPop(){
+        assertFalse(kitchenWithOne.isEmpty());
+        kitchenWithOne.pop(); //takes out the only item in this array
+        assertTrue(kitchenWithOne.isEmpty()); //passes
+    }
+
+    //We are essentially testing every single thing so we know nothing goes wrong, if anything does, we can simply add whatever led to the bug to the test so we can then troubleshoot it
 }
